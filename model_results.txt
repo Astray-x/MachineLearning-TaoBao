@@ -1,0 +1,42 @@
+建模结果报告 2025-06-12 17:23:05.973551
+==================================================
+特征文件: high_value_conversion_features_final.csv
+目标变量: next_is_conversion
+
+[1/4] 加载特征数据...
+数据维度: (829063, 48)
+特征列表: ['user_id', 'item_id', 'category_id', 'behavior_type', 'timestamp', 'datetime', 'minute_sin', 'minute_cos', 'day_of_week', 'is_weekend', 'is_peak_hour', 'pv_to_fav', 'pv_to_cart', 'fav_to_cart', '1h_high_ratio', '1h_pv_to_fav_rate', '1h_pv_to_cart_rate', '1h_fav_to_cart_rate', '24h_high_ratio', '24h_pv_to_fav_rate', '24h_pv_to_cart_rate', '24h_fav_to_cart_rate', '72h_high_ratio', '72h_pv_to_fav_rate', '72h_pv_to_cart_rate', '72h_fav_to_cart_rate', 'behavior_type_total_actions', 'behavior_type_pv_count', 'behavior_type_fav_count', 'behavior_type_cart_count', 'pv_to_fav_sum', 'pv_to_fav_time_mean', 'pv_to_cart_sum', 'pv_to_cart_time_mean', 'fav_to_cart_sum', 'fav_to_cart_time_mean', 'pv_to_fav_rate', 'pv_to_cart_rate', 'fav_to_cart_rate', 'pv_density', 'cart_intensity', 'weekend_cart_boost', 'peak_hour_fav_boost', 'pv_to_fav_speed', 'pv_to_cart_speed', 'fav_to_cart_speed', 'next_high_value', 'next_is_conversion']
+
+[2/4] 数据预处理...
+警告: 缺失特征 ['pv_count', 'fav_count', 'cart_count']
+正样本比例: 5.74%
+
+[3/4] 训练模型...
+模型训练完成
+
+分类报告:
+              precision    recall  f1-score   support
+
+           0       0.98      0.63      0.77    156299
+           1       0.11      0.77      0.20      9514
+
+    accuracy                           0.64    165813
+   macro avg       0.55      0.70      0.48    165813
+weighted avg       0.93      0.64      0.74    165813
+
+AUC得分: 0.7740
+
+特征重要性:
+            feature  importance
+3   pv_to_cart_rate    0.702847
+5  pv_to_cart_speed    0.228783
+4    24h_high_ratio    0.028618
+0        minute_sin    0.019772
+1        minute_cos    0.018878
+2      is_peak_hour    0.001103
+
+[4/4] 保存输出...
+模型已保存至 conversion_model.pkl
+特征重要性已保存
+
+建模流程成功完成！
